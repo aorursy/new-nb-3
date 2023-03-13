@@ -13,15 +13,7 @@ except:
 
     import sys
 
-    !cp ../input/rapids/rapids.0.13.0 /opt/conda/envs/rapids.tar.gz  2>/dev/null
-
-    
-
-    !cd /opt/conda/envs/ && tar -xzf rapids.tar.gz 
-
     sys.path = ["/opt/conda/envs/rapids/lib"] + ["/opt/conda/envs/rapids/lib/python3.6"] + ["/opt/conda/envs/rapids/lib/python3.6/site-packages"] + sys.path
-
-    !cp /opt/conda/envs/rapids/lib/libxgboost.so /opt/conda/lib/  2>/dev/null
 
     print('done installing rapids')
 

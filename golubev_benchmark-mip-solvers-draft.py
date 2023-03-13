@@ -265,7 +265,6 @@ for n_days in [10,20,40,80]:
 
     ds = pd.read_csv(f'/kaggle/input/santa-2019-{n_days}-uniform-days/family_data.csv')
 
-    %time example_ortools(ds.values[:,1:11], ds.values[:,11], False)
 columns = ['competition', 'distribution', 'number days', 'optimum', 'Cplex(seconds)', 'OR-Tools(seconds)']
 
 pd.DataFrame([

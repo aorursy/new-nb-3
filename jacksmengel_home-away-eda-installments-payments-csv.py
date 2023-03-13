@@ -5,10 +5,6 @@ from sklearn.preprocessing import LabelEncoder
 
 train = pd.read_csv('../input/application_train.csv')
 
-    .groupby('SK_ID_CURR') \
-    .agg(['count','mean','min','max', 'sum']) \
-    .reset_index()
-
 columns = ['SK_ID_CURR']
 
 # Convert multi-level index from .agg() into clean columns

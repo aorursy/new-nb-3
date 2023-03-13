@@ -407,8 +407,6 @@ def create_submission_file(model_list):
 
     submission.loc[:,'revenue'] = preds/len(model_list)
 
-    !rm './submission.csv'
-
     submission.to_csv('submission.csv', index = False, header = True)
 
     print(submission.head())

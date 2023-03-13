@@ -113,8 +113,6 @@ for jsn in glob.glob(f'{train_videos}/metadata*.json'):
 
     # symlink all images to 'faces_path'
 
-    !ls {path} | xargs -IN ln -sf {path}/N {faces_path}/
-
     faces = [f'{faces_path}/{vid[:-4]}.jpg' for vid in df[df.label == 'REAL'].index.tolist()]
 
     face_files.extend(faces)
@@ -147,8 +145,6 @@ for idx in tqdm(meta[meta.label == 'REAL'].index,
 #                 print(idx, fake_image)
 
                 # reuse the first valid fake face as the face for the real video
-
-                !ln -sf {fake_image} {real_image}
 
                 assert os.path.isfile(real_image)
 

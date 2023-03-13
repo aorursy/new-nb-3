@@ -221,10 +221,6 @@ class Resize(object):
 
             if _type == 'train':
 
-                !rm -r resized_train
-
-                !mkdir resized_train
-
                 classes = os.listdir(path)
 
                 for _class in classes:
@@ -262,10 +258,6 @@ class Resize(object):
                 return records
 
             else:
-
-                !rm -r resized_test
-
-                !mkdir resized_test
 
                 print('resize test')
 

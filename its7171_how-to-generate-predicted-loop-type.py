@@ -6,12 +6,6 @@ import numpy as np
 import json
 def get_predicted_loop_type(sequence, structure, debug=False):
 
-    !echo $sequence > a.dbn
-
-    !echo "$structure" >> a.dbn
-
-    !export PERL5LIB=/root/perl5/lib/perl5 && perl bpRNA/bpRNA.pl a.dbn
-
     result = [l.strip('\n') for l in open('a.st')]
 
     if debug:

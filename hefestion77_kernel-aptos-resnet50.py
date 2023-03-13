@@ -584,7 +584,6 @@ for im_test in test_id_codes:
     prediction = model.predict(image)
     prediction = np.argmax(prediction)
     predictions_list.append(prediction)
-    %reset_selective -f image
     index += 1
     if index % 500 == 0:
         print(f"\t{index} images")      

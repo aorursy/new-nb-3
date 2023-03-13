@@ -26,7 +26,6 @@ for dirname, _, filenames in os.walk('/kaggle/input'):
     for filename in filenames:
         if ('zip' in filename):
             file = os.path.join(dirname, filename)
-            !unzip -q -n {file} -d {path}
 
 # observation: we can use the first part of the file name before the dot to extract the labels
 train_path = path/'train'

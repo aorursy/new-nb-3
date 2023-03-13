@@ -1,5 +1,4 @@
 # To import kaggle datasets
-'''!pip uninstall -y kaggle
 
 
 # import kaggle json to connect to kaggle user account to download datsets

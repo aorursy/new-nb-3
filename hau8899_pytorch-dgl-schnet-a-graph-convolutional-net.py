@@ -33,8 +33,6 @@ try:
 
 except:
 
-    !pip install dgl
-
     import dgl
 
     

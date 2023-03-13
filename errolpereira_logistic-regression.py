@@ -113,12 +113,6 @@ for fold_, (trn_idx, val_idx) in enumerate(folds.split(train_ohe, target, groups
 
     
 
-    #fitting on training data.
-
-    %time model.fit(tr_x, tr_y)
-
-    
-
     #predicting on test.
 
     y_pred = model.predict(vl_x)

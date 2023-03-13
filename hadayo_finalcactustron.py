@@ -5,23 +5,7 @@ if data_from == "colab":
     from google.colab import files
 
     files.upload()
-
-    !pip install -q kaggle
-
-    !mkdir -p ~/.kaggle
-
-    !cp kaggle.json ~/.kaggle/
-
-    !chmod 600 ~/.kaggle/kaggle.json
-
-    !mkdir /content/cactus/
-
-    !mkdir /content/cactus/data/
-
-    !kaggle competitions download -c aerial-cactus-identification
-
-    !mv test.zip train.zip train.csv sample_submission.csv /content/cactus/data/
-
+    
     import zipfile
 
     def unzip(path):

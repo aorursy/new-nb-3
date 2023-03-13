@@ -59,10 +59,6 @@ class Resize(object):
 
             self.df = pd.read_csv(os.path.join(self.path,'train.csv'))
 
-            !rm -r resized_train_images
-
-            !mkdir resized_train_images
-
             self.new_path = 'resized_train_images'
 
             self.root = os.path.join(self.path,_type)
@@ -72,10 +68,6 @@ class Resize(object):
             _type = 'test_images'
 
             self.df = os.path.join(self.path,'test.csv')
-
-            !rm -r resized_test_images
-
-            !mkdir resized_test_images
 
             self.new_path = 'resized_test_images'
 
